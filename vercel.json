@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/kirlilog_yandex_ru.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/kirlilog_yandex_ru",
+      "dest": "api/kirlilog_yandex_ru.js"
+    }
+  ]
+}
