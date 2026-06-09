@@ -15,6 +15,6 @@ export default function handler(request, response) {
         return;
     }
 
-    const result = lcm(Number(x+"n"), Number(y+"n"));
+    const result = lcm(BigInt(x), BigInt(y));
     response.status(200).setHeader('Content-Type', 'text/plain').end(String(result));
 }
