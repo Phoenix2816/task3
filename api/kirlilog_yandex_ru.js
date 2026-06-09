@@ -10,11 +10,11 @@ const isNaturalNumber = (str) => {
 export default function handler(request, response) {
     const { x, y } = request.query;
 
-    if (!isNaturalNumber(x+"n") || !isNaturalNumber(y+"n")) {
+    if (!isNaturalNumber(x) || !isNaturalNumber(y)) {
         response.status(200).setHeader('Content-Type', 'text/plain').end('NaN');
         return;
     }
 
-    const result = lcm(Number(x), Number(y));
+    const result = lcm(Number(x+"n"), Number(y+"n"));
     response.status(200).setHeader('Content-Type', 'text/plain').end(String(result));
 }
